@@ -3,10 +3,10 @@
 // while 
 $i = 0; // inicializador
 
-while ($i < 10) {
+while ($i < 10) :
     echo $i . "<br>";
     $i++; // incremento
-}
+endwhile;
 
 // do while
 echo "<br>";
@@ -37,5 +37,24 @@ echo "<br>";
 //         echo $i . "<br/>";
 //     }
 // }
+
+// For each
+$clientes = array('Pedro', "Juan", 'Karen');
+
+foreach ($clientes as $cliente) {
+    echo $cliente . "<br/>";
+}
+
+echo count($clientes);
+
+
+$cliente = [
+    'nombre' => 'Juan',
+    'saldo' => 200,
+    'tipo' => 'Premium'
+];
+foreach ($cliente as $key => $valor) :
+    echo $key . '=' . $valor . '<br/>';
+endforeach;
 
 include 'includes/footer.php';
